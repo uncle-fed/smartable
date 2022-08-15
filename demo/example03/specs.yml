@@ -1,0 +1,107 @@
+options:
+  # for date formatting tokens, see: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
+  dateFormat: DDDD
+  htmlAlt: missing
+
+table:
+
+  - id:
+      type: num
+
+  - first_name:
+      header: First Name
+
+  - last_name:
+      header: Last Name
+
+  - email:
+      header: E-Mail
+
+  - gender:
+
+  - guid:
+      type: str
+
+  - amount:
+      type: num
+
+  - ver:
+      header: Version
+      type: version
+
+  - ip_address:
+      header: IP Address
+      type: ip
+      htmlAlt: unknown
+
+  - limits:
+      type: range
+
+  - updated:
+      header: Last Updated
+      type: date
+
+views:
+
+  default: everybody
+
+  everybody:
+    cols:
+      - id
+      - guid
+      - first_name
+      - last_name
+      - email
+      - gender
+      - amount
+      - ver
+      - ip_address
+      - limits
+      - updated
+
+  male:
+    rows: gender = Male
+    cols:
+      - id
+      - guid
+      - first_name
+      - last_name
+      - email
+      - amount
+      - ver
+      - ip_address
+      - limits
+      - updated
+
+  female:
+    rows: gender = Female
+    cols:
+      - id
+      - guid
+      - first_name
+      - last_name
+      - email
+      - amount
+      - ver
+      - ip_address
+      - limits
+      - updated
+
+  essential:
+     cols:
+      - id
+      - guid
+      - first_name
+      - last_name
+      - email
+      - gender
+      - updated
+
+  technical:
+     cols:
+      - guid
+      - amount
+      - ip_address
+      - ver
+      - limits
+      - updated

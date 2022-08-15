@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Smartable Demo: Example 01</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <style>
+        body {background-color: #edf8ed}
+        [hidden] {display: none !important}
+
+        body>output {display: block; background: #fafafa; border: 1px solid red; font: normal 14px Consolas, "Courier New", Courier, monospace; padding: 10px; line-height:22px}
+
+        header {margin: 0; padding: 0; display: block}
+        header div {padding:0; margin: 0}
+        header div input {margin: 0 0 10px 0; background: #fafafa; border: 1px solid #666666; width:1000px; padding: 3px 5px; font: normal 14px Consolas, "Courier New", Courier, monospace}
+        header div output {font: normal 14px Consolas, "Courier New", Courier, monospace; color:#580000; margin: 0 10px 10px 10px; padding: 2px 5px; border: 1px solid #ff8282; display: inline-block}
+        header div button {min-width: 120px; border: 1px solid #999999; margin: 0 0 0 5px; padding: 3px 2px}
+        header div button[name='help'] {min-width: 30px; width: 30px}
+
+        article {display: block; font: normal 13px Verdana, Arial, Helvetica, sans-serif; line-height: 18px; background:#fafafa; border: 1px solid #333333; padding:10px; margin:0 5px 5px 0}
+        article p {margin: 5px 0 10px 0; line-height: 18px}
+        article li {margin-top: 10px}
+        article ul ul {padding: 0}
+        article li li {list-style-type: none; padding-left: 0}
+        article var {font: normal 14px Consolas, "Courier New", Courier, monospace; display: inline-block; padding: 0 3px 0 2px; background: #f0f0f0}
+        article code {font: normal 14px Consolas, "Courier New", Courier, monospace}
+
+        table {border-collapse: collapse; border: 1px solid #666666; font: normal 13px Tahoma, Verdana, sans-serif; max-width: 99%}
+        table tr {background-color: #b0b0b0}
+        table tr:nth-child(2n) {background-color: #f0f0f0}
+        table tr:hover {background-color:#333333}
+        table tr th {background: #666666; color: #fafafa; text-align: center; text-transform: capitalize; user-select: none; -webkit-user-select: none; -moz-user-select: none}
+        table tr td, table tr th {border: 1px solid #aaaaaa; padding:2px 4px 2px 6px; white-space: nowrap}
+        table td {background-color: rgba(61, 255, 255, 0.8)}
+
+        table.-smartable-sortable tr th {cursor: pointer}
+        table.-smartable-filterable tr td {cursor: copy}
+        table tr td.-smartable-bad-value {background: #ffbaba}
+        table tr th.ascending {background: #555555; color: #bfffbf}
+        table tr th.descending {background: #555555; color: #dbdbff}
+        table tr td.special {text-align: center; border-left: 2px solid #2f9e2b; border-right: 2px solid #2f9e2b}
+        table tr:first-of-type td.special {border-top: 2px solid #2f9e2b;}
+        table tr:last-of-type td.special {border-bottom: 2px solid #2f9e2b;}
+    </style>
+    <script src="https://cdn.jsdelivr.net/gh/uncle-fed/smartable@1/src/badbrowser.min.js" nomodule></script>
+    <!--[if !IE]>-->
+    <script type="module">
+        import smartable from "https://cdn.jsdelivr.net/gh/uncle-fed/smartable@1/src/smartable.min.mjs";
+        smartable({
+            source: {data: "data.json"},
+            options: {export: false, htmlAlt: "missing"},
+            cssClass: {sortAsc: "ascending", sortDesc: "descending"},
+            table: [
+                {id: {type: "num"}},
+                {guid: {}},
+                {first_name: {header: "First Name"}},
+                {last_name: {header: "Last Name"}},
+                {email: {header: "E-Mail", cssClass: "special"}},
+                {gender: {}},
+                {amount: {type: "num"}},
+                {ver: {header: "Version", type: "ver"}},
+                {ip_address: {header: "IP Address", type: "ip", htmlAlt: "unknown"}},
+                {limits: {type: "range"}},
+                {updated: {header: "Last Updated", type: "date"}}
+            ]
+        });
+    </script>
+    <!--<![endif]-->
+</head>
+<body>
+    <header>
+        <div>
+            <input type="search" autocomplete="off" spellcheck="false" />
+            <button name="help">?</button>
+            <button name="reset">Clear</button>
+            <button name="submit">Filter</button>
+            <output name="badfilter" hidden></output>
+        </div>
+    </header>
+</body>
+</html>

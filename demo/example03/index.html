@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Smartable Demo: Example 03</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link href="index.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/uncle-fed/smartable@1/src/badbrowser.min.js" nomodule></script>
+    <!--[if !IE]>-->
+    <script type="module" src="main.mjs"></script>
+    <!--<![endif]-->
+</head>
+<body>
+    <header hidden>
+        <div>
+            <input type="search" autocomplete="off" spellcheck="false" />
+            <button name="help">?</button>
+            <button name="reset">Clear</button>
+            <button name="submit">Filter</button>
+            <output name="badfilter" hidden></output>
+        </div>
+        <div>
+            <button name="export">Export</button>
+        </div>
+    </header>
+    <output hidden></output> <!-- general errors container -->
+    <article hidden></article> <!-- help container -->
+    <table hidden>
+        <caption>
+            <span>
+                Rows count: <var></var>
+            </span>
+            <span>View Selector:
+                <button value="everybody">Everybody</button>
+                <button value="male">Male</button>
+                <button value="female">Female</button>
+                <button value="essential">Essential</button>
+                <button value="technical">Technical</button>
+            </span>
+        </caption>
+        <thead>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</body>
+</html>

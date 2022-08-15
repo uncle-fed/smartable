@@ -1,0 +1,47 @@
+options:
+  filter: false
+  sort: false
+  export: false
+  dateFormat: dd-MMM-yyyy
+  htmlAlt: missing
+
+cssClass:
+  badValue: highlight
+
+table:
+
+  - id:
+      type: num
+
+  - guid:
+      type: str
+
+  - first_name:
+      header: First Name
+
+  - last_name:
+      header: Last Name
+
+  - email:
+      header: E-Mail
+
+  - gender:
+
+  - amount:
+      type: num
+
+  - ver:
+      header: Version
+      type: version
+
+  - ip_address:
+      header: IP Address
+      type: ip
+      htmlAlt: unknown
+
+  - limits:
+      type: range
+
+  - updated:
+      header: Last Updated
+      type: date

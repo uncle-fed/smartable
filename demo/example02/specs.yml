@@ -1,0 +1,53 @@
+options:
+  colGroups: true
+  # additional possible values for 'defColGroups' (not obvious from column definitions below) are 'all' or 'none'
+  defColGroups: personal
+
+cssClass:
+  badValue: custom-missing-value-class
+
+table:
+
+  - id:
+      type: num
+
+  - first_name:
+      header: First Name
+      colGroup: personal
+
+  - last_name:
+      header: Last Name
+      colGroup: personal
+
+  - email:
+      header: E-Mail
+      colGroup: personal
+
+  - gender:
+      colGroup: personal
+
+  - guid:
+      type: str
+
+  - amount:
+      type: num
+      colGroup: stats
+
+  - ver:
+      header: Version
+      type: version
+      colGroup: stats
+
+  - ip_address:
+      header: IP Address
+      type: ip
+      htmlAlt: unknown
+      colGroup: stats
+
+  - limits:
+      type: range
+      colGroup: stats
+
+  - updated:
+      header: Last Updated
+      type: date

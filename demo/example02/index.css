@@ -1,0 +1,44 @@
+body {background-color: #edf8ed}
+[hidden] {display: none !important}
+
+header {margin: 0; padding: 0; display: grid; align-content: center; grid-template-columns: auto 120px;}
+header div {padding:0; margin: 0}
+header div:last-child {justify-self: flex-end}
+header div button {min-width: 120px; border: 1px solid #999999; margin: 0 0 0 5px; padding: 3px 2px; cursor: pointer}
+
+.-smartable-filter-input {margin: 0 0 10px 0; background: #fafafa; border: 1px solid #666666; width:1000px; padding: 3px 5px; font: normal 14px Consolas, "Courier New", Courier, monospace}
+.-smartable-filter-error {font: normal 14px Consolas, "Courier New", Courier, monospace; color:#580000; margin: 0 10px 10px 10px; padding: 2px 5px; border: 1px solid #ff8282; display: inline-block}
+.-smartable-filter-help {min-width: 30px; width: 30px}
+
+.-smartable-help {display: block; font: normal 13px Verdana, Arial, Helvetica, sans-serif; line-height: 18px; background:#fafafa; border: 1px solid #333333; padding:10px; margin:0 5px 5px 0}
+.-smartable-help p {margin: 5px 0 10px 0; line-height: 18px}
+.-smartable-help li {margin-top: 10px}
+.-smartable-help ul ul {padding: 0}
+.-smartable-help li li {list-style-type: none; padding-left: 0}
+.-smartable-help var {font: normal 14px Consolas, "Courier New", Courier, monospace; display: inline-block; padding: 0 3px 0 2px; background: #f0f0f0}
+.-smartable-help code {font: normal 14px Consolas, "Courier New", Courier, monospace}
+
+.-smartable {border-collapse: collapse; border: 1px solid #666666; font: normal 13px Tahoma, Verdana, sans-serif; max-width: 99%}
+.-smartable caption {text-align: left; margin: 5px; line-height: 24px}
+.-smartable caption input {margin: auto 5px auto 30px; cursor: pointer}
+.-smartable caption label {cursor: pointer}
+.-smartable tr {background-color: #b0b0b0}
+.-smartable tr:nth-child(2n) {background-color: #f0f0f0}
+.-smartable tr:hover {background-color:#333333}
+.-smartable tr th {background: #666666; color: #fafafa; text-align: center; text-transform: capitalize; user-select: none; -webkit-user-select: none; -moz-user-select: none}
+.-smartable tr td, table tr th {border: 1px solid #aaaaaa; padding:2px 4px 2px 6px; white-space: nowrap}
+.-smartable td {background-color: rgba(61, 255, 255, 0.8)}
+
+.-smartable.-smartable-sortable tr th {cursor: pointer}
+.-smartable.-smartable-filterable tr td {cursor: copy}
+
+.-smartable tr th.-smartable-sort-asc {background: #555555; color: #bfffbf}
+.-smartable tr th.-smartable-sort-desc {background: #555555; color: #dbdbff}
+
+.-smartable tr td.-smartable-colgrp-personal {background-color: rgba(200, 255, 128, 0.6)}
+.-smartable tr td.-smartable-colgrp-stats {background-color: rgba(200, 255, 255, 0.6)}
+
+.-smartable tr td.custom-missing-value-class {background: #ffbaba; border: 2px solid #26103a}
+.-smartable tr td.outdated {background: #a85be7; border: 2px solid #6c10c2}
+
+.-smartable-error {display: block; background: #fafafa; border: 1px solid red; font: normal 14px Consolas, "Courier New", Courier, monospace; padding: 10px; line-height:22px}
